@@ -10,7 +10,7 @@ const Room = (props) => {
   
   const openCamera = async () => {
     const allDevices = await navigator.mediaDevices.enumerateDevices()
-    const cameras = allDevices.filter((device) => device.kind == "videooutput");
+    const cameras = allDevices.filter((device) => device.kind == "videoinput");
 
     const constraints = {
       audio: true,
